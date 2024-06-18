@@ -1,6 +1,7 @@
 package ar.edu.unlam.alicia;
 
 import java.util.List;
+import java.util.TreeSet;
 import java.util.ArrayList;
 
 public class Alicia {
@@ -111,6 +112,14 @@ public class Alicia {
 			}
 		}
 		
+	}
+
+	public TreeSet<Alimento> obtenerAlimentosOrdenadosPorNombreDescendente() {
+		TreeSet<Alimento> auxiliar = new TreeSet<>(new OrdenPorNombreDescendente());
+		
+		auxiliar.addAll(this.alimentosAdquiridos);
+		
+		return auxiliar;
 	}
 
 	// objeto super, que adentro tiene alimentos de tipo achicador y agrandador
